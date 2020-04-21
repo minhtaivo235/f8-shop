@@ -24,7 +24,7 @@
     display: block;
 }
 
-.header__navbar-item--has-notify:hover .header__notify{
+.header__navbar-item--has-notify:hover .header__notify {
     display: block;
 }
 
@@ -38,7 +38,8 @@
     text-decoration: none;
 }
 
-.header__navbar-item, .header__navbar-item-link {
+.header__navbar-item,
+.header__navbar-item-link {
     display: inline-block;
     font-size: 1.4rem;
     color: var(--white-color);
@@ -48,9 +49,9 @@
 
 .header__navbar-item:hover,
 .header__navbar-icon-link:hover,
- .header__navbar-item-link:hover {
+.header__navbar-item-link:hover {
     cursor: pointer;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .header__navbar-item--bold {
@@ -66,7 +67,6 @@
     top: 50%;
     right: -9px;
     transform: translateY(-50%);
-
 }
 
 .header__navbar-title {
@@ -74,7 +74,9 @@
     color: var(--white-color);
 }
 
+
 /* header QR code */
+
 .header__qr {
     background-color: var(--white-color);
     width: 186px;
@@ -83,8 +85,8 @@
     top: 118%;
     padding: 8px;
     border-radius: 2px;
-     display: none; 
-     animation: fadeIn ease-in 0.3s;
+    display: none;
+    animation: fadeIn ease-in 0.3s;
 }
 
 .header__qr::before {
@@ -92,11 +94,9 @@
     position: absolute;
     height: 30px;
     width: 100%;
-    
     top: -16px;
     left: 0;
 }
-
 
 .header__qr-link:first-child {
     margin-left: 11px;
@@ -117,10 +117,11 @@
 
 .header__qr-download-img {
     height: 15px;
-    
 }
 
+
 /* Header notify */
+
 .header__notify {
     position: absolute;
     top: 160%;
@@ -133,11 +134,12 @@
     animation: headerNotifyGrowth ease-in 0.25s;
     will-change: opacity, transform;
     display: none;
+    z-index: 1;
 }
 
 .header__notify::before {
     content: "";
-    border: 30px solid;    
+    border: 30px solid;
     border-color: transparent transparent var(--white-color) transparent;
     position: absolute;
     right: 3px;
@@ -168,8 +170,8 @@
 .header__notify-header {
     height: 40px;
     background-color: var(--white-color);
-
 }
+
 .header__notify-header h3 {
     color: #999;
     margin: 0 0 0 12px;
@@ -181,15 +183,14 @@
 
 .header__notify-list {
     padding-left: 0;
-    
 }
 
 .header__notify-item {
-    display: flex; 
+    display: flex;
 }
 
 .header__notify-item:hover {
- background-color: #f7f7f7;
+    background-color: #f7f7f7;
 }
 
 .header__notify-link {
@@ -197,8 +198,9 @@
     padding: 12px;
     width: 100%;
     text-decoration: none;
-    background-color: rgba(238, 77, 45,0.1);
+    background-color: rgba(238, 77, 45, 0.1);
 }
+
 .header__notify-link.header__notify-item--viewed {
     background-color: var(--white-color);
 }
@@ -241,7 +243,9 @@
     font-weight: 400;
 }
 
+
 /* Authen modal */
+
 .auth-form {
     width: 500px;
     background-color: var(--white-color);
@@ -259,7 +263,7 @@
     justify-content: space-between;
     padding: 0 12px;
     margin-top: 12px;
-}   
+}
 
 .auth-form__heading {
     font-size: 2.2rem;
@@ -274,9 +278,7 @@
     cursor: pointer;
 }
 
-.auth-form__form {
-    
-}
+.auth-form__form {}
 
 .auth-form__input {
     width: 100%;
@@ -327,8 +329,6 @@
     justify-content: space-between;
     margin-top: 24px;
 }
-
-
 
 .auth-form__socials--icon {
     font-size: 1.8rem;
@@ -388,7 +388,6 @@
 
 .header__logo-img {
     width: 150px;
-    
 }
 
 .header__search {
@@ -400,7 +399,7 @@
     align-items: center;
 }
 
-.header__cart { 
+.header__cart {
     width: 150px;
     text-align: center;
 }
@@ -457,7 +456,7 @@
     border-color: transparent transparent var(--white-color) transparent;
 }
 
- .header__cart-list::after {
+.header__cart-list::after {
     content: "";
     position: absolute;
     top: -30px;
@@ -465,7 +464,7 @@
     width: 60px;
     height: 30px;
     cursor: pointer;
-} 
+}
 
 .header__cart-list--no-cart {
     padding: 24px 0;
@@ -485,10 +484,98 @@
 
 .header__cart-list-no-cart-message {
     display: none;
-   
     font-size: 1.4rem;
     margin-top: 14px;
     color: var(--text-color);
+}
+
+.header__cart-list-item {
+    padding-left: 0px;
+    list-style: none;
+}
+
+.header__cart-item {
+    display: flex;
+}
+
+.header__cart-item:hover {
+    background-color: rgb(248, 248, 248);
+}
+
+.header__cart-img {
+    width: 42px;
+    height: 42px;
+    margin: 12px;
+    border-width: 1px solid rgb(232, 232, 232);
+}
+
+.header__cart-item-info {
+    width: 100%;
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.header__cart-item-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__cart-item-name {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333;
+    margin: 0px;
+}
+
+.header__cart-item-price {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.header__cart-item-multiply {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin: 0px 4px;
+}
+
+.header__cart-item-quantity {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.header__cart-item-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__cart-item-description {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.header__cart-item-remove {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.header__cart-item-remove:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.header__cart-viewcart {
+    float: right;
+    margin: 0px 12px 12px 0px;
+}
+
+.header__cart-viewcart:hover {
+    background-color: rgb(240, 93, 65);
 }
 
 .header__search-input-wrap {
@@ -508,11 +595,13 @@
     border-radius: 3px;
 }
 
-.header__search-input:focus ~ .header__search-history {
+.header__search-input:focus~.header__search-history {
     display: block;
 }
 
+
 /* Search history */
+
 .header__search-history {
     position: absolute;
     top: calc(100% + 2px);
@@ -543,8 +632,6 @@
     padding: 0 12px;
 }
 
-
-
 .header__search-history-item:hover {
     background-color: #fafafa;
 }
@@ -557,15 +644,15 @@
     display: block;
 }
 
+
 /* Search select */
+
 .header__search-select {
     border-left: 1px solid #e8e8e8;
     padding-left: 16px;
     position: relative;
     cursor: pointer;
-    
 }
-
 
 .header__search-select-label {
     font-size: 1.4rem;
