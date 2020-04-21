@@ -489,6 +489,14 @@
     color: var(--text-color);
 }
 
+.header__cart-heading {
+    text-align: left;
+    font-size: 1.4rem;
+    color: rgb(153, 153, 153);
+    font-weight: 400;
+    margin: 8px 0px 8px 12px;
+}
+
 .header__cart-list-item {
     padding-left: 0px;
     list-style: none;
